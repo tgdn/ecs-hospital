@@ -19,6 +19,14 @@ public class Hospital {
 		
 	}
 	
+	/*
+	 * Function that will initialize Hospital
+	 * Creates the different illnesses
+	 */
+	public void initialize() {
+		System.out.println("Just creating a hospital");
+	}
+	
 	public int admitPatient(Patient patient) {
 		
 		// return -1 if there is no free bed
@@ -97,8 +105,8 @@ public class Hospital {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("Just creating a hospital");
 		Hospital hospital = new Hospital();
+		hospital.initialize();
 
 		Patient p1 = new Patient('M', 33);
 		Patient p2 = new Patient('F', 12);
