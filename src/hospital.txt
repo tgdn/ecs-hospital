@@ -1,0 +1,79 @@
+*** HOSPITAL ***
+
+Written by Thomas Gak Deluen
+
+HospitalAdministrator.java
+	Basicly acts as an admin for the hospital.
+	This java file contains the main function.
+	When executed, it first retrieves the argument
+	from command line which is the filename of
+	the config file. Then gets all necessary 
+	values to instantiate the Hospital and the
+	different entities.
+	It maintains the day to day work of the hospital.
+	It warns the user that all patients might not 
+	be treated if not all types of doctors exist.
+	And it executes all the `aDayPasses` methods` 
+	for each other class.
+	
+	EXTENSION: Instead of being able to only treat
+	one patient per day, I added a for loop on line 80
+	that makes the sequence of events repeat twice 
+	and therefore doctors can treat patients in the
+	morning and in the afternoon.
+	
+Hospital:
+	Main Hospital class file. Contains all elements 
+	from spec plus maybe some more that were needed.
+	Constructor takes the number of beds and of
+	operating theatres as arguments.
+	It can admit patients given that there is room,
+	can discharge patients, find a free operating 
+	theatre, empty all the theatres, prep for theatre,
+	and take patients to recovery.
+
+Health:
+	Models health of patients. Takes an object of type
+	Illness as parameter in the constructor as well as
+	the healthState, although we could get rid of that 
+	for now they are all sick. According to the illness
+	the different elements of the Health will be updated.
+	The recovery time is set later on through the doctor.
+
+Illness:
+	A class representing an illness. Nothing else than that.
+	Contains all elements from the spec list including a
+	max number of days and a min number of days of recovery.
+
+Person:
+	Abstract class of a person. Same as the spec nothing more 
+	is added really. Apart from the fact that there is 
+	method to check that the gender is correct.
+
+Doctor:
+	Just a doctor like in the spec. Can be assigned a patient.
+	Has a speciality. There is a method using randomness
+	to get a random recovery time.
+	And the main treat patient method.
+
+Surgeon, LimbSurgeon, OrganSurgeon:
+	Pretty much like the spec, maybe some extra checks about
+	operating theatres and patients but nothing more.
+	
+ConfigFileReader:
+	Pretty much opens a file, reads it, checks some values 
+	and return them to the administrator. Finish by closing
+	the file.
+	
+	
+
+
+
+HOW TO RUN:
+	while inside folder containing source files just type in bash:
+			javac *.java
+	if no error (there should not be), you can create your config file
+	or use the one provided.
+	To launch type in the command line:
+			java HospitalAdministrator [config_file]
+	where you replace [config_file] with the path to your config file
