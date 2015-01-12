@@ -33,11 +33,18 @@ public class Hospital {
 		maxBeds = nbeds;
 		maxThr  = ntheatres;
 		
+<<<<<<< HEAD
 		beds = 		new ArrayList<Patient>(maxBeds);	// initialise ArrayList with initialCapacity = 50
 		theatres = 	new ArrayList<Boolean>();
 		
 		
 		// Add 5 theatres
+=======
+		beds = 		new ArrayList<Patient>(maxBeds);
+		theatres = 	new ArrayList<Boolean>();
+		
+		
+>>>>>>> FETCH_HEAD
 		for (int i = 0; i <= maxThr; i++) {
 			theatres.add(new Boolean(true));
 		}
