@@ -3,7 +3,7 @@
 Written by Thomas Gak Deluen
 
 HospitalAdministrator.java
-	Basicly acts as an admin for the hospital.
+	Basically acts as an admin for the hospital.
 	This java file contains the main function.
 	When executed, it first retrieves the argument
 	from command line which is the filename of
